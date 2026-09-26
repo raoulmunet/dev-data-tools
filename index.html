@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dev Data Tools</title><meta name="description" content="Privacy-first browser tools for developers, analysts and data engineers.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="shell">
+  <div class="topbar"><div class="brand">Dev Data Tools</div><div><span class="badge">Browser-first</span> <span class="badge">Privacy-first</span></div></div>
+  <section class="hero">
+    <h1>Small tools. Real data work.</h1>
+    <p class="muted">A growing suite of focused utilities that run entirely in your browser. Use them online from this portal or clone the whole suite and run it locally.</p>
+    <div class="toolbar">
+      <a class="btn primary" href="#tools">Explore tools</a>
+      <a class="btn secondary" href="https://github.com/raoulmunet/dev-data-tools">GitHub</a>
+      <a class="btn secondary" href="#local">Run locally</a>
+    </div>
+  </section>
+
+  <section id="tools" class="panel">
+    <h2>Toolbox</h2>
+    <p class="muted">Choose a tool. “Run here” opens it inside this portal; “Standalone” opens its own GitHub Pages site.</p>
+    <div id="toolGrid" class="grid"></div>
+  </section>
+
+  <section id="runner" class="panel hidden">
+    <div class="topbar"><div><h2 id="runnerTitle">Tool</h2><div id="runnerMeta" class="muted"></div></div>
+      <div class="toolbar"><a id="standaloneLink" class="btn secondary" target="_blank" rel="noopener">Open standalone</a><button id="closeRunner">Close</button></div>
+    </div>
+    <iframe id="toolFrame" class="tool-frame" title="Dev Data Tool"></iframe>
+  </section>
+
+  <section id="local" class="panel">
+    <h2>Install the complete suite locally</h2>
+    <p>Clone the portal, run the installer, then start the local suite:</p>
+    <div class="code">git clone https://github.com/raoulmunet/dev-data-tools.git
+cd dev-data-tools
+chmod +x install-suite.sh
+./install-suite.sh
+./run-local.sh</div>
+    <p class="muted">The installer keeps all repositories as siblings. The local server starts from their common parent so the portal can load every tool without rebuilding anything.</p>
+  </section>
+
+  <div class="footer">Dev Data Tools · MIT licensed · input data stays in your browser</div>
+</div>
+<script src="app.js"></script>
+</body></html>
