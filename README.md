@@ -24,6 +24,15 @@ A privacy-first suite of small browser-based tools for developers, analysts and 
 
 Portal: https://raoulmunet.github.io/dev-data-tools/
 
+For brand-new repositories, enable GitHub Pages once for the entire suite:
+
+```bash
+chmod +x enable-pages.sh
+./enable-pages.sh
+```
+
+The helper uses GitHub CLI (`gh`) and configures Pages to deploy with the included GitHub Actions workflow.
+
 ## Local installation
 
 The portal includes an `install-suite.sh` helper. It clones every tool and can launch a local HTTP server.
