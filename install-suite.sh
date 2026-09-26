@@ -14,4 +14,5 @@ for repo in "${REPOS[@]}"; do
     git clone "https://github.com/$OWNER/$repo.git" "$target"
   fi
 done
+chmod +x "$(dirname "$0")/run-local.sh"
 echo "Suite installed. Run ./run-local.sh from dev-data-tools."
